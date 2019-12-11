@@ -1,0 +1,11 @@
+.brand-new-sky {
+  padding-top: 10vh;
+  &__article {
+    @include article-display-mobile-view;
+
+    h2,
+    p {
+      margin-bottom: 5vh;
+    }
+  }
+}

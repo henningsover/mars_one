@@ -1,0 +1,32 @@
+.main {
+  overflow: hidden;
+  .image-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    &__img {
+      display: block;
+      object-fit: cover;
+      object-position: center center;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      max-height: 100%;
+      max-width: 100%;
+      &--object-fit-contain {
+        object-fit: contain;
+        object-position: unset;
+      }
+    }
+  }
+
+  .article-text {
+    max-inline-size: 90vw;
+    justify-self: center;
+    em {
+      font-style: unset;
+      font-weight: bolder;
+    }
+  }
+}

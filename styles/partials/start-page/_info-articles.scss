@@ -1,0 +1,39 @@
+.info-articles {
+  background: #f1f1f1;
+  padding: 5vh 0;
+  &__container {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 5vh;
+  }
+  &__why-mars {
+    @include article-display-mobile-view;
+    padding: 5vh 0;
+    background: white;
+  }
+  &__move-in {
+    @include article-display-mobile-view;
+    padding: 5vh 0;
+    background: white;
+  }
+  &__sustainable-sun {
+    @include article-display-mobile-view;
+    padding: 5vh 0;
+    background: white;
+  }
+
+  h2 {
+    text-align: center;
+    padding: 5vh 0 10vh 0;
+  }
+
+  h3,
+  p {
+    margin-bottom: 5vh;
+  }
+
+  .read-more-btn {
+    place-self: center;
+    margin-top: 5vh;
+  }
+}

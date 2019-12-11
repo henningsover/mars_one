@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="37px" viewBox="0 0 60 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57 (83077) - https://sketch.com -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo" transform="translate(1.000000, 0.000000)">
+            <g transform="translate(-1.000000, 0.000000)">
+                <rect id="Rectangle" fill="#061B38" x="0" y="0" width="60" height="37"></rect>
+                <text id="O" font-family="Montserrat-ExtraBoldItalic, Montserrat" font-size="25.5000007" font-style="italic" font-weight="600" letter-spacing="0.942083373" fill="#E32700">
+                    <tspan x="3" y="32.1000006">O</tspan>
+                </text>
+                <text id="O" font-family="Montserrat-ExtraBoldItalic, Montserrat" font-size="25.5000007" font-style="italic" font-weight="600" letter-spacing="0.942083373" fill="#061B38">
+                    <tspan x="3" y="30.4000006">O</tspan>
+                </text>
+                <text id="MARS" transform="translate(34.000000, 9.000000) rotate(-360.000000) translate(-34.000000, -9.000000) " font-family="Montserrat-Medium, Montserrat" font-size="6" font-weight="400" letter-spacing="6.821667" fill="#F1F1F1">
+                    <tspan x="11.251666" y="10">MARS</tspan>
+                </text>
+                <text id="ne" transform="translate(40.100001, 18.900001) rotate(-360.000000) translate(-40.100001, -18.900001) " font-family="Montserrat-Light, Montserrat" font-size="25.5000007" font-weight="300" letter-spacing="-1.52291698" fill="#E32700">
+                    <tspan x="25.1000006" y="30.4000006">ne</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

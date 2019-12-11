@@ -1,0 +1,35 @@
+.hero {
+  block-size: 90vh;
+  background-image: url(../assets/img/page-1/hero-1.jpg);
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // background: #a1c3e1;
+    // border: 5px solid antiquewhite;
+    // border-radius: 100%;
+    // max-inline-size: 350px;
+    // inline-size: 100vw;
+    // max-block-size: 350px;
+    // block-size: 100vw;
+  }
+  &:before {
+    content: " ";
+    background: #a1c3e1;
+    border: 5px solid antiquewhite;
+    border-radius: 100%;
+    position: absolute;
+    top: -200px;
+    left: -112px;
+    width: 200vw;
+    height: 500px;
+    max-height: 509px;
+  }
+}

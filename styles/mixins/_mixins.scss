@@ -1,0 +1,8 @@
+@mixin article-display-mobile-view {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: auto minmax(360px, 2fr) auto;
+}
+
+@mixin read-more-btn-style {
+}
