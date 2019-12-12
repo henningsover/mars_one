@@ -267,7 +267,22 @@ p {
       grid-template-rows: auto minmax(375px, 1fr);
 }
 
-.faq-section__travel-time .planet-images {
+.faq-section h2 {
+  text-align: center;
+  padding: 5vh 0 10vh 0;
+}
+
+.faq-section h3,
+.faq-section p {
+  margin-bottom: 5vh;
+}
+
+.faq-section .read-more-btn {
+  place-self: center;
+  margin-top: 5vh;
+}
+
+.planet-images {
   background-image: radial-gradient(circle at 50% 39%, #072142, #00132c 101%);
   display: -ms-grid;
   display: grid;
@@ -282,7 +297,7 @@ p {
       grid-template-columns: 1fr;
 }
 
-.faq-section__travel-time .planet-images__mars {
+.planet-images__mars {
   max-inline-size: 30px;
   max-block-size: 30px;
   display: block;
@@ -290,32 +305,145 @@ p {
       justify-self: center;
 }
 
-.faq-section__travel-time .planet-images__sun {
+.planet-images__sun {
   max-inline-size: 50px;
   max-block-size: 50px;
   -ms-grid-column-align: center;
       justify-self: center;
 }
 
-.faq-section__travel-time .planet-images__earth {
+.planet-images__earth {
   max-inline-size: 25px;
   max-block-size: 25px;
   -ms-grid-column-align: center;
       justify-self: center;
 }
 
-.faq-section h2 {
+.join-us-section {
+  background: #f1f1f1;
+  padding-bottom: 5vh;
+}
+
+.join-us-section .heading-container {
+  max-inline-size: 90vw;
+  margin: auto;
   text-align: center;
-  padding: 5vh 0 10vh 0;
+  padding: 10vh 0;
 }
 
-.faq-section h3,
-.faq-section p {
-  margin-bottom: 5vh;
+.sign-up {
+  background: white;
+  max-inline-size: 1200px;
+  margin: auto;
+  padding: 20px 5px;
 }
 
-.faq-section .read-more-btn {
-  place-self: center;
-  margin-top: 5vh;
+@media (min-width: 400px) {
+  .sign-up {
+    padding: 20px;
+  }
+}
+
+.sign-up__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sign-up__form .inputs__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(150px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  row-gap: 20px;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 690px) {
+  .sign-up__form .inputs__grid {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    -webkit-column-gap: 40px;
+            column-gap: 40px;
+  }
+}
+
+@media (min-width: 770px) {
+  .sign-up__form .inputs__grid {
+    -ms-grid-columns: 1fr 1fr 205px;
+        grid-template-columns: 1fr 1fr 205px;
+  }
+}
+
+@media (min-width: 1180px) {
+  .sign-up__form .inputs__grid {
+    -ms-grid-columns: 2fr 2fr 1fr;
+        grid-template-columns: 2fr 2fr 1fr;
+  }
+}
+
+.sign-up__form .inputs__grid__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 690px) {
+  .sign-up__form .inputs__grid__item .input__size {
+    min-inline-size: 205px;
+    max-inline-size: 400px;
+  }
+}
+
+@media (min-width: 690px) {
+  .sign-up__form .inputs__grid__item .input__size--smaller {
+    max-inline-size: 225px;
+    min-inline-size: 205px;
+  }
+}
+
+.sign-up__form .motivation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1em 0;
+}
+
+.sign-up__form .motivation__textarea {
+  block-size: 20vw;
+  max-block-size: 280px;
+  min-block-size: 100px;
+}
+
+.sign-up__form .submit-btn {
+  max-inline-size: 50px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.sign-up__form .labels {
+  margin-bottom: 5px;
 }
 /*# sourceMappingURL=style.css.map */

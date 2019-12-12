@@ -10,13 +10,13 @@
   <body>
     <header class="top-header">
       <div class="top-header__container">
+        <div class="top-header__logo">
+          <a href="./index.html">
+            <img src="./assets/img/logo.png" alt="Mars one logotype" />
+          </a>
+        </div>
         <nav class="top-header__nav">
           <ul class="nav-list">
-            <li class="nav-list__item">
-              <a href="./index.html" class="logo">
-                <img src="./assets/img/logo.png" alt="Mars one logotype" />
-              </a>
-            </li>
             <li class="nav-list__item">
               <a href="./index.html">Mars One</a>
             </li>
@@ -31,74 +31,89 @@
       </div>
     </header>
 
-    <main>
-      <header class="start-page-header">
-        <div class="start-page-header__container">
-          <h1>Be brave, join the journey!</h1>
-          <p>Be one of the next heroes in space</p>
+    <main class="main">
+      <header class="hero">
+        <div class="hero__container">
+          <h1>There is a Planet B</h1>
+          <p>Be part of the first settlement on Mars</p>
         </div>
       </header>
       <section class="join-us-section">
-        <h2>Join us in the mission</h2>
-        <p>
-          Be part of the mission. Send us your motivation of why just you should
-          be the next space traveler
-        </p>
+        <div class="heading-container">
+          <h2>Join us in the mission</h2>
+          <p>
+            Be part of the mission. Send us your motivation of why just you
+            should be the next space traveler
+          </p>
+        </div>
 
         <div class="sign-up">
-          <form action="https://formspree.io/xoqvrvyp">
-            <div class="sign-up__grid">
-              <label for="first-name"> First name</label>
-              <input
-                type="text"
-                name="first-name"
-                id="first-name"
-                placeholder="Han Solo"
-              />
-              <label for="last-name"> Last name</label>
-              <input
-                type="text"
-                name="last-name"
-                id="last-name"
-                placeholder="Last name"
-              />
-              <label for="date-of-birth">Date of Birth</label>
-              <input
-                type="date"
-                name="date-of-birth"
-                id="date-of-birth"
-                min="1919-01-01"
-                max="1999-01-01"
-              />
-              <label for="professional">Professional</label>
-              <input
-                type="text"
-                name="professional"
-                id="professional"
-                placeholder="Professional"
-              />
-              <label for="prime-skill">Prime skill</label>
-              <input
-                type="text"
-                name="prime-skill"
-                id="prime-skill"
-                placeholder="Prime skill"
-              />
+          <form class="sign-up__form" action="https://formspree.io/xoqvrvyp">
+            <div class="inputs__grid">
+              <div class="inputs__grid__item input__size">
+                <label class="labels" for="first-name"> First name</label>
+                <input
+                  type="text"
+                  name="first-name"
+                  id="first-name"
+                  placeholder="Han Solo"
+                />
+              </div>
+              <div class="inputs__grid__item input__size">
+                <label class="labels" for="last-name"> Last name</label>
+                <input
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  placeholder="Last name"
+                />
+              </div>
+              <div class="inputs__grid__item input__size--smaller">
+                <label class="labels" for="date-of-birth">Date of Birth</label>
+                <input
+                  type="date"
+                  name="date-of-birth"
+                  id="date-of-birth"
+                  min="1919-01-01"
+                  max="1999-01-01"
+                />
+              </div>
+              <div class="inputs__grid__item input__size">
+                <label class="labels" for="professional">Professional</label>
+                <input
+                  type="text"
+                  name="professional"
+                  id="professional"
+                  placeholder="Professional"
+                />
+              </div>
+              <div class="inputs__grid__item input__size">
+                <label class="labels" for="prime-skill">Prime skill</label>
+                <input
+                  type="text"
+                  name="prime-skill"
+                  id="prime-skill"
+                  placeholder="Prime skill"
+                />
+              </div>
             </div>
-            <label for="motivation">Motivation</label>
-            <textarea
-              name="motivation"
-              id="motivation"
-              cols="30"
-              rows="10"
-            ></textarea>
-            <button type="submit">Submit</button>
+            <div class="motivation">
+              <label class="labels" for="motivation">Motivation</label>
+              <textarea
+                class="motivation__textarea"
+                name="motivation"
+                id="motivation"
+                cols="30"
+                rows="10"
+              ></textarea>
+            </div>
+            <button class="submit-btn" type="submit">Submit</button>
           </form>
         </div>
       </section>
     </main>
 
-    <footer>
+    <footer class="footer">
       <div class="footer__container">
         <h2>
           Mars One

@@ -1,0 +1,74 @@
+.sign-up {
+  background: white;
+  max-inline-size: 1200px;
+  margin: auto;
+  padding: 20px 5px;
+  @media (min-width: 400px) {
+    padding: 20px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    .inputs__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      row-gap: 20px;
+      column-gap: 20px;
+      justify-content: center;
+
+      @media (min-width: 690px) {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+        justify-content: unset;
+        column-gap: 40px;
+      }
+      @media (min-width: 770px) {
+        grid-template-columns: 1fr 1fr 205px;
+      }
+      @media (min-width: 1180px) {
+        grid-template-columns: 2fr 2fr 1fr;
+      }
+
+      &__item {
+        display: flex;
+        flex-direction: column;
+        .input__size {
+          @media (min-width: 690px) {
+            min-inline-size: 205px;
+            max-inline-size: 400px;
+          }
+          &--smaller {
+            @media (min-width: 690px) {
+              max-inline-size: 225px;
+              min-inline-size: 205px;
+            }
+          }
+        }
+      }
+    }
+
+    .motivation {
+      display: flex;
+      flex-direction: column;
+      // max-inline-size: 360px;
+      // inline-size: 360px;
+      padding: 1em 0;
+
+      &__textarea {
+        block-size: 20vw;
+        max-block-size: 280px;
+        min-block-size: 100px;
+      }
+    }
+
+    .submit-btn {
+      max-inline-size: 50px;
+      align-self: center;
+    }
+
+    .labels {
+      margin-bottom: 5px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.planet-images {
+  background-image: radial-gradient(circle at 50% 39%, #072142, #00132c 101%);
+  display: grid;
+  justify-content: center;
+  grid-template-rows: repeat(3, 1fr);
+  padding: 5vh 0;
+  min-inline-size: 375px;
+  grid-template-columns: 1fr;
+  &__mars {
+    max-inline-size: 30px;
+    max-block-size: 30px;
+    display: block;
+    justify-self: center;
+  }
+  &__sun {
+    max-inline-size: 50px;
+    max-block-size: 50px;
+    justify-self: center;
+  }
+  &__earth {
+    max-inline-size: 25px;
+    max-block-size: 25px;
+    justify-self: center;
+  }
+}
