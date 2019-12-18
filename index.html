@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700,800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/style.css" />
     <title>Mars One</title>
   </head>
@@ -17,7 +21,7 @@
         </div>
         <nav class="top-header__nav">
           <ul class="nav-list">
-            <li class="nav-list__item">
+            <li class="nav-list__item active">
               <a href="./index.html">Mars One</a>
             </li>
             <li class="nav-list__item">
@@ -35,12 +39,19 @@
       <header class="hero">
         <div class="hero__container">
           <h1>There is a Planet B</h1>
-          <p>Be part of the first settlement on Mars</p>
+          <span>Be part of the first settlement on Mars</span>
         </div>
       </header>
       <section class="brand-new-sky">
         <article class="brand-new-sky__article">
-          <div class="article-text">
+          <div class="image-wrapper max-grow">
+            <img
+              class="image-wrapper__img"
+              src="./assets/img/page-1/photo-1511798616182-aab3698ac53e.jpeg"
+              alt="Picture of the sky of Mars"
+            />
+          </div>
+          <div class="brand-new-sky__article__text">
             <h2>A brand new sky</h2>
             <p>
               <em>Mars One</em> aims to establish a permanent human settlement
@@ -52,20 +63,20 @@
               there to stay.
             </p>
           </div>
-          <div class="image-wrapper">
-            <img
-              class="image-wrapper__img"
-              src="./assets/img/page-1/photo-1511798616182-aab3698ac53e.jpeg"
-              alt="Picture of the sky of Mars"
-            />
-          </div>
         </article>
       </section>
       <section class="info-articles">
         <h2>Be the earths closest neighbour</h2>
         <div class="info-articles__container">
-          <article class="info-articles__why-mars">
-            <div class="article-text">
+          <article class="info-articles__first">
+            <div class="image-wrapper">
+              <img
+                class="image-wrapper__icon"
+                src="./assets/img/page-1/planet-red.png"
+                alt="This is a cartooned picture of Mars"
+              />
+            </div>
+            <div class="info-articles__first__text">
               <h3>Why Mars?</h3>
               <p>
                 After the Earth, Mars is the most habitable planet in our solar
@@ -74,27 +85,12 @@
                 (albeit a thin one) that offers protection from cosmic and the
                 Sun's radiation.
               </p>
-            </div>
-            <div class="image-wrapper">
-              <img
-                class="image-wrapper__img image-wrapper__img--object-fit-contain"
-                src="./assets/img/page-1/planet-red.png"
-                alt="This is a cartooned picture of Mars"
-              />
-            </div>
-            <div class="read-more-btn">
-              <button>Read more</button>
+              <div class="read-more-btn">
+                <button>Read more</button>
+              </div>
             </div>
           </article>
-          <article class="info-articles__move-in">
-            <div class="article-text">
-              <h3>Just move in</h3>
-              <p>
-                Before carefully selected and trained crews will depart to Mars,
-                several unmanned missions will be completed, establishing a
-                habitable settlement waiting for the first astronauts to arrive.
-              </p>
-            </div>
+          <article class="info-articles__second">
             <div class="image-wrapper">
               <img
                 class="image-wrapper__img"
@@ -102,12 +98,27 @@
                 alt="This is a drawn picture of our base"
               />
             </div>
-            <div class="read-more-btn">
-              <button>Read more</button>
+            <div class="info-articles__second__text">
+              <h3>Just move in</h3>
+              <p>
+                Before carefully selected and trained crews will depart to Mars,
+                several unmanned missions will be completed, establishing a
+                habitable settlement waiting for the first astronauts to arrive.
+              </p>
+              <div class="read-more-btn">
+                <button>Read more</button>
+              </div>
             </div>
           </article>
-          <article class="info-articles__sustainable-sun">
-            <div class="article-text">
+          <article class="info-articles__last">
+            <div class="image-wrapper">
+              <img
+                class="image-wrapper__icon"
+                src="./assets/img/page-1/solar.png"
+                alt="This is a drawn picture of the sun"
+              />
+            </div>
+            <div class="info-articles__last__text">
               <h3>Sustainable Sun</h3>
               <p>
                 The Sun is a reliable, robust, and plentiful energy source.
@@ -116,16 +127,9 @@
                 reactor, thereby saving time and money while avoiding the risks
                 and concerns of the use of a nuclear power source.
               </p>
-            </div>
-            <div class="image-wrapper">
-              <img
-                class="image-wrapper__img image-wrapper__img--object-fit-contain"
-                src="./assets/img/page-1/solar.png"
-                alt="This is a drawn picture of the sun"
-              />
-            </div>
-            <div class="read-more-btn">
-              <button>Read more</button>
+              <div class="read-more-btn">
+                <button>Read more</button>
+              </div>
             </div>
           </article>
         </div>
@@ -137,10 +141,10 @@
         <h2>
           Mars One
         </h2>
-        <p>
+        <span>
           This site is made for educational purpose and is based on the real
           <a href="">Mars One</a> project.
-        </p>
+        </span>
       </div>
     </footer>
   </body>

@@ -4,8 +4,12 @@
   justify-content: center;
   grid-template-rows: repeat(3, 1fr);
   padding: 5vh 0;
-  min-inline-size: 375px;
   grid-template-columns: 1fr;
+
+  @media (min-width: 900px) {
+    min-inline-size: 390px;
+    min-block-size: 390px;
+  }
   &__mars {
     max-inline-size: 30px;
     max-block-size: 30px;

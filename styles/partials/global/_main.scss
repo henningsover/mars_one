@@ -4,26 +4,46 @@
     position: relative;
     height: 100%;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     &__img {
       display: block;
-      object-fit: cover;
       object-position: center center;
-      position: absolute;
+      object-fit: cover;
+      // position: absolute;
       height: 100%;
       width: 100%;
       max-height: 100%;
       max-width: 100%;
-      &--object-fit-contain {
-        object-fit: contain;
-        object-position: unset;
-      }
+    }
+
+    &__icon {
+      display: block;
+      object-fit: contain;
+      object-position: unset;
+      // position: absolute;
+      height: 190px;
+      width: 190px;
+      max-height: 300px;
+      max-width: 300px;
     }
   }
 
   .article-text {
+    display: flex;
+    flex-direction: column;
     max-inline-size: 90vw;
     justify-self: center;
+    padding-top: 5vh;
+    @media (min-width: 500px) {
+      padding: 5vw 20px 5vw 0;
+    }
+    @media (min-width: 700px) {
+      padding: unset;
+    }
+
     em {
       font-style: unset;
       font-weight: bolder;

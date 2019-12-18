@@ -63,8 +63,7 @@
     }
 
     .submit-btn {
-      max-inline-size: 50px;
-      align-self: center;
+      @include button;
     }
 
     .labels {

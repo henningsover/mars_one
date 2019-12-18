@@ -2,24 +2,64 @@
   background: #f1f1f1;
   padding: 5vh 0;
   &__container {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: 5vh;
+    @media (min-width: 800px) {
+      display: grid;
+      grid-gap: 5vh;
+      grid-template-columns: 2fr 1fr;
+      max-inline-size: 1200px;
+      margin: auto;
+      padding: unset;
+    }
   }
-  &__why-mars {
-    @include article-display-mobile-view;
-    padding: 5vh 0;
-    background: white;
+  &__first {
+    @include article-block("img-article");
+
+    @media (min-width: 800px) {
+      grid-row: 1;
+    }
+
+    &__text {
+      @include article-text("img-article");
+    }
   }
-  &__move-in {
-    @include article-display-mobile-view;
-    padding: 5vh 0;
-    background: white;
+  &__second {
+    @include article-block("img-article");
+
+    @media (min-width: 800px) {
+      grid-row: 2;
+    }
+
+    &__text {
+      @include article-text("img-article");
+    }
   }
-  &__sustainable-sun {
-    @include article-display-mobile-view;
-    padding: 5vh 0;
-    background: white;
+
+  &__last {
+    @include article-block("img-article");
+    margin: 0;
+
+    @media (min-width: 800px) {
+      grid-row: span 2;
+      grid-template-columns: unset;
+      padding: 0 10px;
+    }
+
+    &__text {
+      @include article-text("img-article");
+      @media (min-width: 800px) {
+        padding: 0 3vw 4vw 3vw;
+        justify-content: space-between;
+      }
+      // h3,
+      // p {
+      //   @media (min-width: 500px) {
+      //     max-inline-size: 40ch;
+      //   }
+      //   @media (min-width: 800px) {
+      //     max-inline-size: 30ch;
+      //   }
+      // }
+    }
   }
 
   h2 {
@@ -29,11 +69,25 @@
 
   h3,
   p {
-    margin-bottom: 5vh;
+    margin-bottom: 2vh;
+  }
+
+  p {
+    font-size: 14px;
+    @media (min-width: 800px) {
+      font-size: 16px;
+    }
   }
 
   .read-more-btn {
     place-self: center;
-    margin-top: 5vh;
+
+    @media (min-width: 500px) {
+      place-self: unset;
+    }
+
+    button {
+      @include button;
+    }
   }
 }

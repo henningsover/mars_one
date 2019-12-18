@@ -1,35 +1,100 @@
 .hero {
-  block-size: 90vh;
+  block-size: 100vh;
   background-image: url(../assets/img/page-1/hero-1.jpg);
   background-size: cover;
   background-position: center center;
-  display: flex;
-  justify-content: center;
+  display: grid;
   position: relative;
   &__container {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    // background: #a1c3e1;
-    // border: 5px solid antiquewhite;
-    // border-radius: 100%;
-    // max-inline-size: 350px;
-    // inline-size: 100vw;
-    // max-block-size: 350px;
-    // block-size: 100vw;
+    max-inline-size: 300px;
+    max-block-size: 260px;
+    top: 14vw;
+    justify-self: center;
+    grid-area: 1 / 1;
+    z-index: 1;
+
+    @media (min-width: 800px) {
+      justify-self: center;
+      max-inline-size: 33vw;
+      top: 15vw;
+      top: 123px;
+    }
+    @media (min-width: 1000px) {
+      margin-left: auto;
+      margin-right: 10vw;
+      max-inline-size: 430px;
+      top: 15vw;
+      top: 123px;
+    }
+
+    h1 {
+      max-inline-size: 12ch;
+      color: $color--variation-1;
+      font-weight: $font-weight--extra-bold;
+      font-size: 30px;
+      border-bottom: 7px solid $color--variation-1;
+      letter-spacing: 2.22px;
+      @media (min-width: 620px) {
+        font-size: 5vw;
+        letter-spacing: 2.22px;
+      }
+      @media (min-width: 1000px) {
+        font-size: 60px;
+        letter-spacing: 2.22px;
+      }
+    }
+
+    span {
+      font-size: 20px;
+      color: $color--variation-4;
+      letter-spacing: 1.48px;
+      max-inline-size: 20ch;
+
+      @media (min-width: 650px) {
+        font-size: 3vw;
+      }
+      @media (min-width: 1000px) {
+        font-size: 40px;
+      }
+    }
   }
-  &:before {
-    content: " ";
-    background: #a1c3e1;
-    border: 5px solid antiquewhite;
-    border-radius: 100%;
+  &:before,
+  &:after {
+    grid-area: 1 / 1;
+    content: "";
+    display: block;
+    height: 120vw;
+    width: 141%;
+    background: blue;
+    clip-path: ellipse(50% 35% at 38.82% 14.42%);
+    transform: rotate(10deg) translateY(3px);
     position: absolute;
-    top: -200px;
-    left: -112px;
-    width: 200vw;
-    height: 500px;
-    max-height: 509px;
+    top: -60px;
+    left: -54px;
+    min-block-size: 700px;
+
+    @media (min-width: 580px) {
+      left: -100px;
+    }
+
+    @media (min-width: 800px) {
+      height: 200%;
+      width: 141%;
+      top: -210px;
+      left: -100px;
+    }
+  }
+
+  &:before {
+    transform: rotate(10deg) translateY(3px);
+    background: lightblue;
+    top: -50px;
+
+    @media (min-width: 800px) {
+      top: -200px;
+    }
   }
 }

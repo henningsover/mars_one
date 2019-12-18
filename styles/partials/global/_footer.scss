@@ -1,8 +1,30 @@
 .footer {
-  padding: 5vh 0 5vh 0;
+  display: flex;
+  justify-content: center;
+  background: $color--variation-3;
+  min-block-size: 300px;
   &__container {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-block-size: 100px;
     margin: auto;
-    max-width: 90vw;
+    text-align: center;
+    color: $color--variation-1;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+
+  span {
+    font-size: 12px;
+  }
+
+  a {
+    text-decoration: none;
+    color: $color--variation-6;
   }
 }

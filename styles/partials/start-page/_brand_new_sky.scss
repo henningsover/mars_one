@@ -1,11 +1,49 @@
 .brand-new-sky {
-  padding-top: 10vh;
   &__article {
-    @include article-display-mobile-view;
+    @include article-block("basic-article");
+    display: grid;
+    padding: 0;
+    margin: 0;
+    grid-template-rows: minmax(350px, 2fr) auto;
 
-    h2,
-    p {
-      margin-bottom: 5vh;
+    @media (min-width: 800px) {
+      padding: 0;
+      grid-template-rows: unset;
+      grid-template-columns: minmax(350px, 1fr) 1fr;
+    }
+    @media (min-width: 900px) {
+      grid-template-columns: minmax(350px, 1fr) 2fr;
+    }
+    &__text {
+      @include article-text("img-article");
+
+      @media (min-width: 800px) {
+        padding: 4vw;
+      }
+      @media (min-width: 900px) {
+        padding: 10vw 5vw;
+      }
+      h2 {
+        color: $color--variation-5;
+        margin-bottom: 5vh;
+      }
+      p {
+        font-size: 16px;
+        margin-bottom: 5vh;
+        font-weight: $font-weight--regular;
+        @media (min-width: 800px) {
+          font-size: 18px;
+          margin: 0;
+        }
+      }
+    }
+
+    .max-grow {
+      max-height: 400px;
+
+      @media (min-width: 800px) {
+        max-height: 100%;
+      }
     }
   }
 }

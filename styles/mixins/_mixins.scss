@@ -1,8 +1,78 @@
-@mixin article-display-mobile-view {
-  display: grid;
-  grid-auto-flow: row;
-  grid-template-rows: auto minmax(360px, 2fr) auto;
+@mixin article-block($type: "basic-article") {
+  @if $type == "basic-article" {
+    padding: 5vh 5vw;
+    background: white;
+    margin-bottom: 5vh;
+    @media (min-width: 900px) {
+      padding: 5vh 5vw;
+      margin-bottom: 0vh;
+    }
+  }
+
+  @if $type == "img-article" {
+    background: white;
+    padding-bottom: 5vh;
+    margin-bottom: 5vh;
+    @media (min-width: 500px) {
+      display: grid;
+      grid-auto-flow: row;
+      grid-template-rows: unset;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 5vw;
+      padding: unset;
+    }
+    @media (min-width: 800px) {
+      margin: 0;
+    }
+  }
 }
 
-@mixin read-more-btn-style {
+@mixin article-text($type: "basic-article") {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+
+  @if $type == "basic-article" {
+    @media (min-width: 900px) {
+      justify-content: center;
+      max-inline-size: unset;
+    }
+  }
+
+  @if $type == "img-article" {
+    padding: 5vh 4vw 0 4vw;
+
+    @media (min-width: 500px) {
+      padding: 3vw 4vw 3vw 0;
+      justify-content: center;
+      justify-self: unset;
+      max-inline-size: unset;
+    }
+  }
+}
+
+@mixin button($variant: "primary") {
+  font-size: 14px;
+  padding: 10px 24px;
+  border: 1px solid blue;
+  border-radius: 4px;
+  max-inline-size: 128px;
+  max-block-size: 38px;
+
+  @if $variant == "primary" {
+    color: blue;
+    background: none #fff;
+    border-color: blue;
+  }
+
+  @if $variant == "secondary" {
+    color: gray;
+    background: none #fff;
+    border-color: gray;
+  }
+}
+
+@mixin link-style {
+  color: $color--variation-1;
+  text-decoration: none;
 }

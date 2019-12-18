@@ -1,22 +1,53 @@
 .top-header {
   padding: 10px 0;
+  background: #061b38;
   &__container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-block-size: 80px;
+    padding: 0 3vw;
+
+    @media (min-width: 450px) {
+      flex-direction: row;
+    }
+  }
+
+  &__nav {
+    @media (min-width: 450px) {
+      margin-left: auto;
+      min-inline-size: 290px;
+    }
 
     .nav-list {
       display: flex;
       list-style: none;
       margin: 0;
       padding: 0;
+      justify-content: space-between;
+
       &__item {
         padding: 0 10px;
+      }
+
+      .active {
+        text-decoration: underline;
+      }
+
+      &__item a {
+        @include link-style;
+
+        &:hover {
+          color: $color--variation-5;
+        }
+        &:active {
+          text-decoration: underline;
+        }
       }
     }
   }
   img {
-    max-block-size: 2rem;
-    max-inline-size: 4rem;
+    max-block-size: 43px;
+    max-inline-size: 68px;
   }
 }
