@@ -11,6 +11,7 @@
     margin: auto;
     text-align: center;
     color: $color--variation-1;
+    max-inline-size: 80vw;
   }
 
   h2 {
@@ -26,5 +27,10 @@
   a {
     text-decoration: none;
     color: $color--variation-6;
+    display: inline-block;
+    &:hover {
+      border-bottom: 1px solid $color--variation-1;
+      transition: all ease-in 200ms;
+    }
   }
 }

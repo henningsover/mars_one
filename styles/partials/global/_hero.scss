@@ -1,15 +1,27 @@
 .hero {
   block-size: 100vh;
-  background-image: url(../assets/img/page-1/hero-1.jpg);
-  background-size: cover;
-  background-position: center center;
   display: grid;
   position: relative;
+  z-index: -2;
+
+  @media (min-width: 600px) {
+    block-size: 100vh;
+  }
+
+  &__background {
+    &--index {
+      @include hero-bgimg("index");
+    }
+    &--faq {
+      @include hero-bgimg("faq");
+    }
+  }
+
   &__container {
     position: relative;
     display: flex;
     flex-direction: column;
-    max-inline-size: 300px;
+    max-inline-size: 325px;
     max-block-size: 260px;
     top: 14vw;
     justify-self: center;
@@ -18,26 +30,35 @@
 
     @media (min-width: 800px) {
       justify-self: center;
-      max-inline-size: 33vw;
+      margin-left: auto;
+      margin-right: 10vw;
+      max-inline-size: 45vw;
       top: 15vw;
       top: 123px;
     }
     @media (min-width: 1000px) {
       margin-left: auto;
       margin-right: 10vw;
-      max-inline-size: 430px;
+      max-inline-size: 480px;
       top: 15vw;
       top: 123px;
     }
 
+    &--bigger {
+      max-inline-size: 350px;
+      @media (min-width: 800px) {
+        max-inline-size: 46vw;
+      }
+      @media (min-width: 1000px) {
+        max-inline-size: 600px;
+      }
+    }
+
     h1 {
-      max-inline-size: 12ch;
-      color: $color--variation-1;
-      font-weight: $font-weight--extra-bold;
-      font-size: 30px;
-      border-bottom: 7px solid $color--variation-1;
-      letter-spacing: 2.22px;
+      transition: font-size ease-in 200ms;
+      @include hero-heading;
       @media (min-width: 620px) {
+        border-bottom: 7px solid $color--variation-1;
         font-size: 5vw;
         letter-spacing: 2.22px;
       }
@@ -48,10 +69,8 @@
     }
 
     span {
-      font-size: 20px;
-      color: $color--variation-4;
-      letter-spacing: 1.48px;
-      max-inline-size: 20ch;
+      transition: font-size ease-in 200ms;
+      @include hero-span;
 
       @media (min-width: 650px) {
         font-size: 3vw;
@@ -61,40 +80,90 @@
       }
     }
   }
-  &:before,
-  &:after {
-    grid-area: 1 / 1;
-    content: "";
-    display: block;
-    height: 120vw;
-    width: 141%;
-    background: blue;
-    clip-path: ellipse(50% 35% at 38.82% 14.42%);
-    transform: rotate(10deg) translateY(3px);
-    position: absolute;
-    top: -60px;
-    left: -54px;
-    min-block-size: 700px;
+  &::before,
+  &::after {
+    @include hero-blobs-basics("top");
+  }
 
-    @media (min-width: 580px) {
-      left: -100px;
-    }
+  &::before {
+    @include hero-back-blob;
+  }
 
-    @media (min-width: 800px) {
-      height: 200%;
-      width: 141%;
-      top: -210px;
-      left: -100px;
+  &::after {
+    @include hero-front-blob;
+  }
+}
+
+.hero--bottom-blob {
+  block-size: 100vh;
+  display: grid;
+  position: relative;
+  z-index: -2;
+
+  @media (min-width: 600px) {
+    block-size: 100vh;
+  }
+
+  &__background {
+    &--join {
+      @include hero-bgimg("join");
     }
   }
 
-  &:before {
-    transform: rotate(10deg) translateY(3px);
-    background: lightblue;
-    top: -50px;
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-inline-size: 325px;
+    max-block-size: 260px;
+    grid-area: 1 / 1;
+    z-index: 1;
+    margin-left: 5vw;
+    margin-right: auto;
+    bottom: 60px;
+    align-self: end;
 
-    @media (min-width: 800px) {
-      top: -200px;
+    @media (min-width: 600px) {
+      max-inline-size: 57vw;
     }
+    @media (min-width: 800px) {
+      max-inline-size: 480px;
+    }
+
+    h1 {
+      @include hero-heading;
+      @media (min-width: 600px) {
+        border-bottom: 7px solid $color--variation-1;
+        font-size: 7vw;
+        letter-spacing: 2.22px;
+      }
+      @media (min-width: 800px) {
+        font-size: 60px;
+        letter-spacing: 2.22px;
+      }
+    }
+
+    span {
+      @include hero-span;
+
+      @media (min-width: 600px) {
+        font-size: 5vw;
+      }
+      @media (min-width: 800px) {
+        font-size: 40px;
+      }
+    }
+  }
+  &::before,
+  &::after {
+    @include hero-blobs-basics("bottom");
+  }
+
+  &::before {
+    @include hero-back-blob("bottom");
+  }
+
+  &::after {
+    @include hero-front-blob;
   }
 }

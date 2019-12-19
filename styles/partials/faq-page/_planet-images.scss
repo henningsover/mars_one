@@ -5,6 +5,7 @@
   grid-template-rows: repeat(3, 1fr);
   padding: 5vh 0;
   grid-template-columns: 1fr;
+  min-block-size: 300px;
 
   @media (min-width: 900px) {
     min-inline-size: 390px;

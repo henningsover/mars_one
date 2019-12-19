@@ -31,22 +31,22 @@
     }
   }
 
-  .article-text {
-    display: flex;
-    flex-direction: column;
-    max-inline-size: 90vw;
-    justify-self: center;
-    padding-top: 5vh;
-    @media (min-width: 500px) {
-      padding: 5vw 20px 5vw 0;
-    }
-    @media (min-width: 700px) {
-      padding: unset;
-    }
+  // .article-text {
+  //   display: flex;
+  //   flex-direction: column;
+  //   max-inline-size: 90vw;
+  //   justify-self: center;
+  //   padding-top: 5vh;
+  //   @media (min-width: 500px) {
+  //     padding: 5vw 20px 5vw 0;
+  //   }
+  //   @media (min-width: 700px) {
+  //     padding: unset;
+  //   }
 
-    em {
-      font-style: unset;
-      font-weight: bolder;
-    }
-  }
+  //   em {
+  //     font-style: unset;
+  //     font-weight: bolder;
+  //   }
+  // }
 }

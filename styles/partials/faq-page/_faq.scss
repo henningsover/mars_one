@@ -14,6 +14,7 @@
   }
   &__why-move {
     @include article-block("basic-article");
+    @include box-shadow;
     @media (min-width: 900px) {
       grid-row: span 2;
     }
@@ -27,6 +28,7 @@
   }
   &__risks {
     @include article-block("basic-article");
+    @include box-shadow;
     ul {
       padding: 0 1em;
     }
@@ -47,6 +49,7 @@
   }
   &__what-to-do {
     @include article-block("img-article");
+    @include box-shadow;
     padding-top: 5vh;
     padding-bottom: 0;
 
@@ -92,14 +95,18 @@
   h2 {
     text-align: center;
     padding: 5vh 0 10vh 0;
+    color: $color--variation-3;
   }
 
   h3 {
+    color: $color--variation-5;
     margin-bottom: 5vh;
   }
 
   p {
-    font-size: 15px;
+    font-size: 14px;
+    color: $color--variation-7;
+    font-weight: $font-weight--medium;
     @media (min-width: 800px) {
       font-size: 16px;
     }

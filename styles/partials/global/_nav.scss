@@ -31,18 +31,11 @@
       }
 
       .active {
-        text-decoration: underline;
+        @include active-link;
       }
 
       &__item a {
         @include link-style;
-
-        &:hover {
-          color: $color--variation-5;
-        }
-        &:active {
-          text-decoration: underline;
-        }
       }
     }
   }

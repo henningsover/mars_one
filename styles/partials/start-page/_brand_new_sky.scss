@@ -17,6 +17,10 @@
     &__text {
       @include article-text("img-article");
 
+      @media (min-width: 500px) {
+        padding: 5vh 4vw 0 4vw;
+      }
+
       @media (min-width: 800px) {
         padding: 4vw;
       }
@@ -35,6 +39,11 @@
           font-size: 18px;
           margin: 0;
         }
+      }
+      em {
+        font-style: unset;
+        font-weight: $font-weight--bold;
+        color: $color--variation-5;
       }
     }
 

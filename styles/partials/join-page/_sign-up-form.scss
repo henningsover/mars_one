@@ -3,6 +3,7 @@
   max-inline-size: 1200px;
   margin: auto;
   padding: 20px 5px;
+  @include box-shadow;
   @media (min-width: 400px) {
     padding: 20px;
   }
@@ -64,10 +65,21 @@
 
     .submit-btn {
       @include button;
+      align-self: center;
     }
 
     .labels {
       margin-bottom: 5px;
+      color: $color--variation-3;
     }
+  }
+  input,
+  textarea {
+    border: 1px solid $color--variation-4;
+    border-radius: 5px;
+  }
+
+  input {
+    height: 39px;
   }
 }
