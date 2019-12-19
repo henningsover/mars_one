@@ -168,17 +168,26 @@
   padding: 10px 24px;
   border: 1px solid $color--variation-4;
   border-radius: 4px;
-  max-inline-size: 128px;
+  max-inline-size: 130px;
   max-block-size: 38px;
   color: $color--variation-3;
   background: none #fff;
   border-color: $color--variation-4;
+  font-weight: $font-weight--medium;
+  letter-spacing: 0.52px;
+  &:hover {
+    border-style: double;
+    border-width: 5px;
+    padding: 5px 15px;
+    transition: all ease-in 200ms;
+  }
 }
 
 @mixin link-style {
   color: $color--variation-1;
   text-decoration: none;
   display: inline-block;
+  letter-spacing: 0.59px;
   &:hover {
     color: $color--variation-5;
     transform: scale(1.1);

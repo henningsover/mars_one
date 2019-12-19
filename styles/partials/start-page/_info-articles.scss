@@ -69,10 +69,13 @@
     text-align: center;
     padding: 5vh 0 10vh 0;
     color: $color--variation-3;
+    letter-spacing: 1.33px;
   }
 
   h3 {
     color: $color--variation-5;
+    line-height: 22px;
+    letter-spacing: 0.89px;
   }
 
   h3,
@@ -84,6 +87,8 @@
     font-size: 14px;
     color: $color--variation-7;
     font-weight: $font-weight--medium;
+    line-height: 22px;
+    letter-spacing: 0.59px;
     @media (min-width: 800px) {
       font-size: 16px;
     }

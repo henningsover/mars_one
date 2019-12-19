@@ -100,6 +100,7 @@ h3 {
   color: #ffffff;
   text-decoration: none;
   display: inline-block;
+  letter-spacing: 0.59px;
 }
 
 .top-header__nav .nav-list__item a:hover {
@@ -156,6 +157,13 @@ h3 {
   width: 190px;
   max-height: 300px;
   max-width: 300px;
+  padding-top: 10px;
+}
+
+@media (min-width: 500px) {
+  .main .image-wrapper__icon {
+    padding: unset;
+  }
 }
 
 .hero {
@@ -528,10 +536,12 @@ h3 {
   font-size: 30px;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  letter-spacing: 1.11px;
 }
 
 .footer span {
   font-size: 12px;
+  letter-spacing: 0.44px;
 }
 
 .footer a {
@@ -627,12 +637,15 @@ h3 {
 .brand-new-sky__article__text h2 {
   color: #e32700;
   margin-bottom: 5vh;
+  letter-spacing: 1.33px;
 }
 
 .brand-new-sky__article__text p {
   font-size: 16px;
   margin-bottom: 5vh;
   font-weight: 400;
+  letter-spacing: 0.66px;
+  line-height: 26px;
 }
 
 @media (min-width: 800px) {
@@ -869,10 +882,13 @@ h3 {
   text-align: center;
   padding: 5vh 0 10vh 0;
   color: #2c4f80;
+  letter-spacing: 1.33px;
 }
 
 .info-articles h3 {
   color: #e32700;
+  line-height: 22px;
+  letter-spacing: 0.89px;
 }
 
 .info-articles h3,
@@ -884,6 +900,8 @@ h3 {
   font-size: 14px;
   color: #323232;
   font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.59px;
 }
 
 @media (min-width: 800px) {
@@ -907,11 +925,21 @@ h3 {
   padding: 10px 24px;
   border: 1px solid #436dac;
   border-radius: 4px;
-  max-inline-size: 128px;
+  max-inline-size: 130px;
   max-block-size: 38px;
   color: #2c4f80;
   background: none #fff;
   border-color: #436dac;
+  font-weight: 500;
+  letter-spacing: 0.52px;
+}
+
+.info-articles .read-more-btn button:hover {
+  border-style: double;
+  border-width: 5px;
+  padding: 5px 15px;
+  -webkit-transition: all ease-in 200ms;
+  transition: all ease-in 200ms;
 }
 
 .faq-section {
@@ -1183,10 +1211,13 @@ h3 {
   text-align: center;
   padding: 5vh 0 10vh 0;
   color: #2c4f80;
+  letter-spacing: 1.33px;
 }
 
 .faq-section h3 {
   color: #e32700;
+  line-height: 22px;
+  letter-spacing: 0.89px;
   margin-bottom: 5vh;
 }
 
@@ -1271,12 +1302,14 @@ h3 {
 .join-us-section .heading-container h2 {
   color: #e32700;
   margin-bottom: 5vh;
+  letter-spacing: 1.33px;
 }
 
 .join-us-section .heading-container span {
   color: #2c4f80;
   font-weight: 400;
   font-size: 15px;
+  letter-spacing: 0.89px;
   display: block;
   max-inline-size: 30ch;
 }
@@ -1399,19 +1432,31 @@ h3 {
   padding: 10px 24px;
   border: 1px solid #436dac;
   border-radius: 4px;
-  max-inline-size: 128px;
+  max-inline-size: 130px;
   max-block-size: 38px;
   color: #2c4f80;
   background: none #fff;
   border-color: #436dac;
+  font-weight: 500;
+  letter-spacing: 0.52px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
+.sign-up__form .submit-btn:hover {
+  border-style: double;
+  border-width: 5px;
+  padding: 5px 15px;
+  -webkit-transition: all ease-in 200ms;
+  transition: all ease-in 200ms;
+}
+
 .sign-up__form .labels {
   margin-bottom: 5px;
   color: #2c4f80;
+  font-weight: 700;
+  letter-spacing: 0.52px;
 }
 
 .sign-up input,
